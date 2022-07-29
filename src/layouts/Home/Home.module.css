@@ -1,0 +1,123 @@
+.banner {
+  display: grid;
+  height: 100%;
+}
+.imgBanner {
+  width: 100%;
+  max-height: 90vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.textBanner {
+  z-index: 1;
+  position: absolute;
+  top: 30%;
+  left: 8%;
+  width: 37em;
+}
+
+.titleBanner {
+  color: #fff;
+  font-weight: 700;
+  font-size: 50px;
+  padding-bottom: 5px;
+}
+
+.pBanner {
+  color: #fff;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: justify;
+  padding-bottom: 5px;
+}
+
+.statsFly {
+  position: absolute;
+  width: 100%;
+  bottom: -12%;
+}
+
+.stats {
+  padding: 22px 31px;
+  background-color: #fff;
+  border-radius: 0.775rem;
+  z-index: 1;
+}
+
+.iconStats {
+  color: var(--secondary);
+  font-size: 40px;
+  border-radius: 50%;
+  padding: 5px;
+  border: 5px solid var(--primary);
+  background-color: var(--primary);
+}
+
+.iconStats:hover {
+  color: var(--primary);
+  background-color: var(--secondary);
+}
+
+.textStats {
+  margin-left: 2rem;
+}
+
+.titleStats {
+  color: #0b132a;
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.pStats {
+  color: #4f5665;
+}
+
+.teamWorks {
+  margin: 7rem 0;
+}
+
+.imgTeamWork {
+  max-width: 90%;
+}
+
+.titleTeamWork {
+  margin-top: 2rem;
+  color: #0b132a;
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 50px;
+}
+
+.pTeamwork {
+  color: #4f5665;
+  font-size: 1em;
+}
+
+.iconTeamWork {
+  color: #2fab73;
+  font-size: 1.2rem;
+  margin-right: 0.8em;
+}
+
+.iconFav {
+  color: #2fab73;
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+.descCard {
+  height: 18em;
+}
+
+.hoverCard:hover {
+  border: 1px solid var(--secondary);
+}
+
+.visitMaps {
+  margin-top: 7rem;
+}
