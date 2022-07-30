@@ -121,3 +121,35 @@
 .visitMaps {
   margin-top: 7rem;
 }
+
+.iconStar {
+  color: #fea250;
+}
+
+.imgPerson {
+  margin-right: 1rem;
+}
+
+.customerReview {
+  margin-bottom: 7em;
+}
+
+.commentCustomer {
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.cardCustomer:hover {
+  border: 1px solid var(--secondary);
+  box-shadow: -1px 22px 17px -9px rgba(0, 0, 0, 0.29);
+}
+
+.cardsAuth {
+  width: 10em;
+}
+
+.footerFly {
+  position: absolute;
+  width: 100%;
+  top: 243em;
+}
