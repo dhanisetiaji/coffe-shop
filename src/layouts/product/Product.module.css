@@ -1,0 +1,102 @@
+.VoucherWrapper {
+  border-right: 0.5px solid #e6e6e6;
+}
+
+.hProduct {
+  color: var(--secondary);
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.pProduct {
+  font-size: 12px;
+  font-family: "Poppins";
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.card1 {
+  background-color: #88b788;
+  border: 1px solid #88b788;
+  border-radius: 10px;
+}
+
+.card1:hover {
+  background-color: #f5c361;
+  border: 1px solid #f5c361;
+  border-radius: 10px;
+}
+
+.descPromo {
+  text-align: start;
+  font-family: "Poppins";
+  color: #000;
+}
+
+.titlePromo {
+  margin: 10px 0 0 0;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.pPromo {
+  font-size: 14px;
+}
+
+.active {
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--secondary);
+}
+
+.hProduct0 {
+  color: var(--secondary);
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.hProduct1 {
+  color: #9f9f9f;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.imgProduct {
+  /* position: absolute !important; */
+}
+
+.imageProduct {
+  /* margin: 10px !important; */
+}
+
+.cardProduct {
+  border-radius: 20px;
+  padding: 0 20px 5px 20px;
+  background-color: #fff;
+  width: 100%;
+  box-shadow: 12px 24px 28px -10px rgba(0, 0, 0, 0.17);
+  /* border-top-left-radius: 100%; */
+  /* border-top-right-radius: 100%; */
+}
+
+.cardProduct:hover {
+  border: 1px solid var(--secondary);
+}
+
+.titleProduct {
+  background-color: transparent;
+  font-family: "Poppins";
+  font-size: 22px;
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+}
+
+.priceProduct {
+  font-family: "Poppins";
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--secondary);
+  text-decoration: none !important;
+}

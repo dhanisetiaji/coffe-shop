@@ -1,0 +1,37 @@
+.nameProduct {
+  font-size: 3rem;
+  color: #000;
+  font-weight: 900;
+  font-family: "Poppins";
+}
+
+.priceProduct {
+  font-size: 1.5rem;
+  color: #000;
+  font-weight: 700;
+  font-family: "Poppins";
+}
+
+.title {
+  font-size: 3rem;
+  color: #000;
+  font-weight: 900;
+  font-family: "Poppins";
+}
+
+.description {
+  font-size: 1.5rem;
+  color: #000;
+  text-align: justify;
+}
+
+.btnCart {
+  border: none;
+  width: 50px;
+}
+
+.formCart {
+  border: none;
+  width: 50px;
+  text-align: center;
+}

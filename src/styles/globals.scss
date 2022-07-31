@@ -10,10 +10,12 @@ body {
   --primary: #FFBA33;
   --hover-primary: #f3b63b;
   --secondary: #6A4029;
+  --hover-secondary: #79492f;
   --tertiary: #5C5470;
   --quartiary: #DBD8E3;
   --bg-darker: #191919;
   --bg-dark: #323232;
+  --bs-breadcrumb-divider: '>' ;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -45,6 +47,16 @@ input[type=number] {
   box-shadow: 3px 2px 52px -15px rgba(255,186,51,0.34);
 }
 
+.btn-secondary{
+  background-color:var(--secondary);
+  font-weight: 600;
+  padding: 9px 36px;
+  font-size: 0.8rem;
+  border:1px solid var(--secondary);
+  color:#fff;
+  box-shadow: 3px 2px 52px -15px rgba(255,186,51,0.34);
+}
+
 .btn-light{
   font-weight: 600;
   font-size: 1rem;
@@ -71,6 +83,18 @@ input[type=number] {
   background-color:var(--secondary);
   color:var(--primary);
 }
+
+.btn-secondary:hover{
+  background-color:var(--hover-secondary);
+  border:1px solid var(--hover-secondary);
+  color:#fff;
+}
+
+.btn-secondary:active{
+  background-color:var(--hover-secondary);
+  color:#fff;
+}
+
 .btn-check:focus+.btn, .btn:focus{
   outline: none;
   background-color: var(--primary);
@@ -102,9 +126,21 @@ input[type=number] {
   box-shadow: 3px 2px 52px -15px rgba(255,186,51,0.34);
 }
 
-.box-shadow{
-  box-shadow: -1px 22px 17px -9px rgba(0,0,0,0.29);
+.form-select{
+  padding: 0.8rem 0.75rem;
+  border-radius:0.675rem;
+  border: 1px solid #4F5665;
+}
 
+.form-select:focus{
+  background-color: #fff;
+  border-color: #4F5665!important;
+  box-shadow: 3px 2px 52px -15px rgba(255,186,51,0.34);
+}
+
+
+.box-shadow{
+  box-shadow: -1px 22px 17px -9px rgba(15, 15, 15, 0.29);
 }
 
 .social a{
@@ -222,4 +258,34 @@ input[type=number] {
 
 footer{
   background-color: #F8F8F8;
+}
+
+.translate-middle {
+  transform: translate(-130%,-65%)!important;
+}
+
+.bg-secondary{
+  background-color: var(--secondary)!important;
+}
+
+.navbar{
+  border-bottom: 0.5px solid #e6e6e6;
+}
+
+.bg-transparent{
+  background-color: transparent!important;
+}
+
+nav{
+  .breadcrumb{
+    a{
+      color: #4F5665;
+      font-size: 1rem;
+    }
+    .breadcrumb-item.active{
+      color: var(--secondary);
+      font-size: 1ren;
+      font-weight: 600;
+    }
+  }
 }

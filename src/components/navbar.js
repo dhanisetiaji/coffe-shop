@@ -1,11 +1,10 @@
 import Link from "next/link"
 import Image from "next/image"
 import logo from "../../public/img/logo-coffe.svg"
-import toggle from "../../public/img/toggle.svg"
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg bg-light py-3">
+        <nav className="navbar navbar-expand-lg py-3">
             <div className="container">
                 <Link href={'/'}><div className="title navbar-brand d-flex align-items-center fs-6"><Image src={logo} alt="logo-coffe" /><div className="mx-3"><a>Coffee shop</a></div></div></Link>
 
@@ -15,16 +14,16 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarText">
                     <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <Link href="#"><a className="nav-link active" aria-current="page" >Home</a></Link>
+                            <Link href="/"><a className="nav-link active" aria-current="page" >Home</a></Link>
                         </li>
                         <li className="nav-item">
-                            <Link href="#"><a className="nav-link" >Product</a></Link>
+                            <Link href="/product"><a className="nav-link" >Product</a></Link>
                         </li>
                         <li className="nav-item">
-                            <Link href="#"><a className="nav-link" >Your Cart</a></Link>
+                            <Link href="/cart"><a className="nav-link" >Your Cart</a></Link>
                         </li>
                         <li className="nav-item">
-                            <Link href="#"><a className="nav-link" >History</a></Link>
+                            <Link href="/history"><a className="nav-link" >History</a></Link>
                         </li>
                     </ul>
                     <span className="navbar-text d-flex justify-content-center align-items-center">
