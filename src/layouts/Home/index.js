@@ -1,4 +1,4 @@
-import Head from 'next/head'
+/* eslint-disable @next/next/no-img-element */
 import Navbar from '../../components/navbar'
 import Footer from '../../components/footer'
 // import Slider from "react-slick";
@@ -8,18 +8,9 @@ import { AiOutlineHeart, AiFillStar, AiOutlineArrowRight, AiOutlineArrowLeft } f
 import styles from './Home.module.css'
 
 const Homepage = () => {
-    // const settings = {
-    //     dots: true,
-    //     infinite: true,
-    //     slidesToShow: 3,
-    //     slidesToScroll: 1,
-    //     draggable: true,
-    // }
+
 
     return (<>
-        <Head>
-            <title>Coffee Shop</title>
-        </Head>
         <Navbar />
         <div className={styles.banner}>
             <img src="/img/banner.png" alt="banner" className={styles.imgBanner} />
@@ -171,7 +162,6 @@ const Homepage = () => {
                 <h3 className={styles.titleTeamWork}>Loved by Thousands of<br /> Happy Customer</h3>
                 <p className={`${styles.pTeamwork} mb-5`}>These are the stories of our customers who have visited us with<br />great pleasure.</p>
                 <div className="row">
-                    {/* <Slider {...settings}> */}
                     <div className="col-4">
                         <div className={`card ${styles.cardCustomer}`}>
                             <div className="card-body">
@@ -261,12 +251,9 @@ const Homepage = () => {
                             <AiOutlineArrowRight className="iconArrowRight" />
                         </div>
                     </div>
-                    {/* </Slider> */}
                 </div>
             </div>
         </div>
-
-
 
         <div className={styles.footerFly}>
             <div className={`${styles.stats} container box-shadow`}>

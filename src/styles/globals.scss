@@ -60,7 +60,7 @@ input[type=number] {
 .btn-light{
   font-weight: 600;
   font-size: 1rem;
-  box-shadow: 3px 2px 52px -15px rgba(0,0,0,0.17);
+  box-shadow: -4px 8px 21px -9px rgba(0,0,0,0.85);
 }
 
 .btn-radius{
@@ -153,8 +153,9 @@ input[type=number] {
 
 .cards-absolute{
   padding:0px 90px;
-  position: absolute;
-  bottom: -31%;
+  position: relative;
+    margin-top: -12vh;
+    margin-bottom: -10vh;
   
   .card-absolute{
     padding: 22px 31px;

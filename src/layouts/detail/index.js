@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import Head from 'next/head'
-import NavbarLogin from '../../components/navbarlogin'
+import Navbar from '../../components/navbar'
 import Footer from '../../components/footer'
 import styles from './Detail.module.css'
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
@@ -11,13 +10,7 @@ const DetailLayout = () => {
     const [quantity, setQuantity] = useState(1)
 
     return (<>
-        <Head>
-            <link rel="preconnect" href="https://fonts.googleapis.com" />
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
-            <title>Cold Brew | Coffee Shop</title>
-        </Head>
-        <NavbarLogin />
+        <Navbar />
         <div className="container mb-5">
             <div className="row mt-3">
                 <div className="col-5">
@@ -28,7 +21,7 @@ const DetailLayout = () => {
                         </ol>
                     </nav>
                     <div className="text-center">
-                        <Image src={'/img/coldbrew.png'} width="300px" height="300px" className="img-circle" />
+                        <Image src={'/img/coldbrew.png'} width="300px" height="300px" className="img-circle" alt='cold-brew' />
                         <div className="my-3">
                             <h3 className={styles.nameProduct}>Cold Brew</h3>
                             <p className={styles.priceProduct}>Rp. 10.000</p>

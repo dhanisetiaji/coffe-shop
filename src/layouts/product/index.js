@@ -1,17 +1,14 @@
+/* eslint-disable jsx-a11y/alt-text */
 import Image from "next/image"
-import NavbarLogin from "../../components/navbarlogin"
+import Navbar from '../../components/navbar'
 import Footer from "../../components/footer"
 import styles from "./Product.module.css"
 import Link from "next/link"
-import Head from "next/head"
 
 
 const ProductLayout = () => {
     return (<>
-        <Head>
-            <title>List Product | Coffee Shop</title>
-        </Head>
-        <NavbarLogin />
+        <Navbar />
         <div className="container-fluid">
             <div className="row">
                 <div className={`col-3 pt-3 ${styles.VoucherWrapper}`}>

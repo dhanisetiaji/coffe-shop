@@ -1,21 +1,38 @@
 
 import { useEffect } from 'react'
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import { store, persistor } from '../redux/store';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../styles/globals.scss'
-import Head from 'next/head'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function MyApp({ Component, pageProps }) {
+
   useEffect(() => {
     import('bootstrap/dist/js/bootstrap.min.js')
   })
   return (<>
-    <Head>
-      <meta charset="UTF-8" />
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="description" content="Coffee Shop is a store that sells some good meals, and especially coffee. We provide high quality beans" />
-    </Head>
-    <Component {...pageProps} />
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <Component {...pageProps} />
+        {/* <IziScript /> */}
+      </PersistGate>
+    </Provider>
+    <ToastContainer
+      position="top-right"
+      autoClose={5000}
+      theme="dark"
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+    />
   </>)
 }
 

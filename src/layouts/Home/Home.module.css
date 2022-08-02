@@ -35,9 +35,9 @@
 }
 
 .statsFly {
-  position: absolute;
+  position: relative;
+  margin-top: -10vh;
   width: 100%;
-  bottom: -12%;
 }
 
 .stats {
@@ -78,7 +78,7 @@
 }
 
 .teamWorks {
-  margin: 7rem 0;
+  margin: 4rem 0;
 }
 
 .imgTeamWork {
@@ -149,7 +149,8 @@
 }
 
 .footerFly {
-  position: absolute;
+  position: relative;
   width: 100%;
-  top: 243em;
+  margin-top: -8vh;
+  margin-bottom: -10vh;
 }
