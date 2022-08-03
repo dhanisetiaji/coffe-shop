@@ -1,0 +1,76 @@
+.CheckoutWrapper {
+  background: url("/img/bg-checkout.png") no-repeat center center;
+  background-size: cover;
+  height: auto;
+  padding-bottom: 5rem;
+}
+.card{
+  border-radius: 5%;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  width: 316px;
+  font-family: "Rubik";
+}
+
+.TitleOrderSummary {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--secondary);
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  text-align: center;
+  font-family: "Poppins";
+}
+
+.productDetail {
+  font-size: 1rem;
+  font-family: "Poppins";
+  line-height: 30px;
+  font-weight: 500;
+}
+
+.priceCheckout{
+  font-family: 'Poppins';
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.imgRounded{
+  border-radius: 20%;
+}
+
+.pOrderSummary{
+  font-size: 1rem;
+  font-family: "Poppins";
+  line-height: 30px;
+  font-weight: 500;
+}
+
+.titleDetails{
+  font-size: 1.5rem;
+  font-family: "Poppins";
+  font-weight: 600;
+  color: #fff;
+
+}
+.pDetails{
+  font-size: 1rem;
+  font-family: "Poppins";
+  font-weight: 500;
+  color: #fff;
+}
+
+.icon{
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: var(--secondary);
+}

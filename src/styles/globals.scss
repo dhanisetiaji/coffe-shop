@@ -290,3 +290,8 @@ nav{
     }
   }
 }
+
+.form-check-input:checked {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+}

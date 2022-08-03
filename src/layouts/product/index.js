@@ -11,7 +11,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 import useSWR from "swr"
 import Myloader from "./loader"
-import convertRupiah from "rupiah-format"
+import toRupiah from '@develoka/angka-rupiah-js';
+
 
 const fetcher = url => axios.get(url).then(res => res.data).catch(err => err.response.data);
 
@@ -24,6 +25,7 @@ const ProductLayout = () => {
     const { data: product, isValidating: loading } = useSWR(`/api/product?limit=8`, fetcher)
     // console.log(product);
     // console.log(loading);
+
     useEffect(() => {
         if (code !== undefined) {
             if (data) {
@@ -171,7 +173,7 @@ const ProductLayout = () => {
                                                             <Image src={item.productImage} width={'120px'} height="120px" className={`img-circle ${styles.imgProduct}`} />
                                                         </div>
                                                         <p className={`${styles.titleProduct}`}>{item.productName}</p>
-                                                        <p className={`${styles.priceProduct}`}>{convertRupiah.convert(item.productPrice)}</p>
+                                                        <p className={`${styles.priceProduct}`}>{toRupiah(item.productPrice, { floatingPoint: 0, formal: false, symbol: 'IDR' })}</p>
                                                     </div>
                                                 </div>
                                             </a>

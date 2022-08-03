@@ -26,8 +26,12 @@
 }
 
 .btnCart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   width: 50px;
+  background-color: #e9ecef;
 }
 
 .formCart {

@@ -10,6 +10,7 @@ const HeadLayout = ({ title }) => {
             <meta name="description" content="Coffee Shop is a store that sells some good meals, and especially coffee. We provide high quality beans" />
             <title>{title} | Coffe shop</title>
             <link rel="icon" type="image/x-icon" href="/img/logo-coffe.svg" />
+
         </Head>
     </>
     )
