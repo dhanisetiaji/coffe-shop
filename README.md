@@ -106,4 +106,4 @@ yarn dev
 <!-- Contributors -->
 ## Contributors
 
-- Fullstack [Dhani Setiaji](https://github.com/dhanisetiaji)
+- [Dhani Setiaji](https://github.com/dhanisetiaji)
