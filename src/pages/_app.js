@@ -10,10 +10,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 function MyApp({ Component, pageProps }) {
-
-  useEffect(() => {
-    import('bootstrap/dist/js/bootstrap.min.js')
-  })
   return (<>
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>

@@ -5,10 +5,19 @@ import Navbar from '../../components/navbar'
 import Footer from '../../components/footer'
 import styles from './Detail.module.css'
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
+import axios from 'axios'
+import useSWR from 'swr'
+import convertRupiah from "rupiah-format"
+import { ImgLoader, Content } from './loader'
 
-const DetailLayout = () => {
+const fetcher = url => axios.get(url).then(res => res.data).catch(err => err.response.data);
+
+
+const DetailLayout = ({ slug }) => {
     const [quantity, setQuantity] = useState(1)
-
+    const { data, isValidating: loading } = useSWR(`/api/product?slug=${slug.slug}`, fetcher)
+    // console.log(data);
+    let titleDb = data.data.title
     return (<>
         <Navbar />
         <div className="container mb-5">
@@ -21,18 +30,23 @@ const DetailLayout = () => {
                         </ol>
                     </nav>
                     <div className="text-center">
-                        <Image src={'/img/coldbrew.png'} width="300px" height="300px" className="img-circle" alt='cold-brew' />
-                        <div className="my-3">
-                            <h3 className={styles.nameProduct}>Cold Brew</h3>
-                            <p className={styles.priceProduct}>Rp. 10.000</p>
-                        </div>
+                        {loading ? <ImgLoader /> : (<>
+                            <Image src={data.data.productImage} alt={data.data.productName} className="img-circle" width={300} height={300} />
+                            <div className="my-3">
+                                <h3 className={styles.nameProduct}>{data.data.productName}</h3>
+                                <p className={styles.priceProduct}>{convertRupiah.convert(data.data.productPrice)}</p>
+                            </div>
+                        </>)}
+
                     </div>
                 </div>
                 <div className="col-7 mt-5">
                     <div className="row">
                         <div className="col-12">
                             <h3 className={styles.title}>Description:</h3>
-                            <p className={styles.description}>Cold brewing is a method of brewing that combines ground coffee and cool water and uses time instead of heat to extract the flavor. It is brewed in small batches and steeped for as long as 48 hours.</p>
+                            {loading ? <Content /> : (<>
+                                <p className={styles.description}>{data.data.productDesc}</p>
+                            </>)}
                         </div>
                         <div className="col-12">
                             <select name="size" className='form-select'>

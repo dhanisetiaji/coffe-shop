@@ -44,7 +44,7 @@ const Navbar = () => {
                                     <span className="visually-hidden">unread messages</span>
                                 </span>
                             </div>
-                            <Link href={'/profile'}><a><Image src={data.userImage} width={'35px'} height="35px" className="img-circle"></Image></a></Link>
+                            <Link href={'/profile'}><a><Image src={data.userImage} width={'35px'} height="35px" alt="profile img" className="img-circle"></Image></a></Link>
                         </>)}
                         {data?.isLoggedIn === false && (<>
                             <Link href="/auth/signin"><a className="nav-link mx-3 fw-semibold">Login</a></Link>
