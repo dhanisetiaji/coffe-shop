@@ -4,6 +4,8 @@ import logo from "../../public/img/logo-coffe.svg"
 // import LoaderNav from "./Loader/Navbar"
 import useVerify from '../lib/useVerify'
 import { useRouter } from 'next/router'
+import axios from "axios"
+import Swal from "sweetalert2"
 
 
 
@@ -11,6 +13,27 @@ const Navbar = () => {
     const router = useRouter()
     const { data, mutateData } = useVerify();
     const pathName = router.pathname
+
+    const handleLogout = () => {
+        axios({
+            method: "GET",
+            url: `/api/auth/logout`,
+        }).then
+            (res => {
+                if (res.data.success) {
+                    Swal.fire({
+                        title: "Logout Success",
+                        text: "You have been logout",
+                        icon: "success",
+                        showConfirmButton: false,
+                        timer: 1000
+                    })
+                    mutateData()
+                }
+            }).catch(err => {
+                console.log(err)
+            })
+    }
     return (
         <nav className="navbar navbar-expand-lg py-3">
             <div className="container">
@@ -39,7 +62,7 @@ const Navbar = () => {
                         {data?.isLoggedIn === true && (<>
                             <div type="button" className="position-relative" style={{ marginRight: '25px' }}>
                                 <Image src="/img/chat.svg" width={'25px'} height={'25px'} alt="icon"></Image>
-                                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">
+                                <span onClick={() => handleLogout()} className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">
                                     99+
                                     <span className="visually-hidden">unread messages</span>
                                 </span>
