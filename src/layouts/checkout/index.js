@@ -38,7 +38,7 @@ const IndexCheckout = () => {
     let taxPrice = 0
     let voucherPrice = 0
     if (!loading) {
-        const price = data.data.productPrice
+        const price = data?.data.productPrice
         cart.size === 'medium' ? subtotal = (price * cart.qty) + (3000 * cart.qty) : cart.size === 'large' ? subtotal = (price * cart.qty) + (5000 * cart.qty) : subtotal = price * cart.qty
         taxPrice = subtotal * 0.1
         if (!loading1) {
