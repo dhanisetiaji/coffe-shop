@@ -16,8 +16,6 @@ const fetcher = url => axios.get(url).then(res => res.data).catch(err => err.res
 const DetailLayout = ({ slug }) => {
     const [quantity, setQuantity] = useState(1)
     const { data, isValidating: loading } = useSWR(`/api/product?slug=${slug.slug}`, fetcher)
-    // console.log(data);
-    let titleDb = data.data.title
     return (<>
         <Navbar />
         <div className="container mb-5">
